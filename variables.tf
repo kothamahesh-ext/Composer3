@@ -1,4 +1,23 @@
-variable "project_id" { description = "The GCP project ID" }
-variable "region"     { description = "Region" default = "us-central1" }
-variable "network"    { description = "VPC Name" default = "composer-vpc" }
-variable "subnet"     { description = "Subnet Name" default = "composer-subnet" }
+variable "project_id" {
+  type = string
+}
+
+variable "region" {
+  type    = string
+  default = "us-central1"
+}
+
+variable "composer_env_name" {
+  type    = string
+  default = "private-composer3"
+}
+
+variable "network_name" {
+  type    = string
+  default = "composer-vpc"
+}
+
+variable "subnet_name" {
+  type    = string
+  default = "composer-subnet"
+}
